@@ -1,0 +1,81 @@
+﻿@model R_DTH.Models.faq
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<section class="content-header">
+    <h1>
+        <small>Admin View</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Customer</a></li>
+        <li><a href="#">List</a></li>
+        <li class="active">Details</li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <br>
+    <br>
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-0">
+
+        </div>
+        <!--/.col (left) -->
+        <!-- right column -->
+        <div class="col-md-12">
+            <!-- Horizontal Form -->
+            <!-- general form elements disabled -->
+            <div class="box box-warning">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Customer Details</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-8">
+                        <div>
+                            <div>
+                                <h4>faq</h4>
+                                <hr />
+                                <dl class="dl-horizontal">
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.faq_question)
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.faq_question)
+                                    </dd>
+
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.faq_answers)
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.faq_answers)
+                                    </dd>
+
+                                </dl>
+                            </div>
+                            <p>
+                                @Html.ActionLink("Edit", "Edit", new { id = Model.faq_id }) |
+                                @Html.ActionLink("Back to List", "Index")
+                            </p>
+
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!--/.col (right) -->
+    </div>
+    <!-- /.row -->
+</section>
+
+

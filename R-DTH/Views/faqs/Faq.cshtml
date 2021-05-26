@@ -1,0 +1,158 @@
+﻿@model IEnumerable<R_DTH.Models.faq>
+
+@{
+    ViewBag.Title = "Faq";
+    Layout = "~/Views/Shared/_ThemeLayout.cshtml";
+}
+
+  <!-- banner -->
+<div class="w3ls-banner contact-agileinfo">
+    <div class="container">
+        <h2 class="w3ls-title">Need help?</h2>
+        <h3 class="w3-subtitle">We're here for you!</h3>
+    </div>
+</div>
+<!-- //banner -->
+<!-- breadcrumbs -->
+<div class="w3layouts-breadcrumbs text-center">
+    <div class="container">
+        <span class="agile-breadcrumbs"><a href="@Url.Action("Index","Home")">Home</a> > <a href="@Url.Action("Faq","Home")">Customer Care</a> > <span>Faq</span></span>
+    </div>
+</div>
+<!-- //breadcrumbs -->
+<!-- //banner -->
+<div class="w3l-main-contact">
+    <div class="container">
+        <div class="col-md-3 w3_agileits-contact-inner">
+            <ul class="w3-inner-contact">
+                <li><a href="@Url.Action("Dealers","dealers")">dealers</a></li>
+                <li><a href="@Url.Action("Contact","Home")">contact us</a></li>
+                <li class="active"><a href="@Url.Action("Faq","faqs")">faq</a></li>
+            </ul>
+        </div>
+        <div class="col-md-8 agileinfo-contact-main-address">
+            <h4 class="w3ls-inner-title">R-DTH faq's</h4>
+            <div class="panel-group faq-w3ls" id="accordion" role="tablist" aria-multiselectable="true">
+
+                @foreach (var item in Model)
+                {
+                String abc="name"+item.faq_id;
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="@Html.DisplayName(abc+"a")">
+                            <h5 class="panel-title asd">
+                                <a class="pa_italic collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#@Html.DisplayName(abc)" aria-expanded="false"
+                                   aria-controls="@Html.DisplayForModel(abc)">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><i class="glyphicon glyphicon-chevron-down" aria-hidden="true"></i>
+                                    @Html.DisplayFor(modelItem => item.faq_question)
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="@Html.DisplayName(abc)" class="panel-collapse collapse" role="tabpanel" aria-labelledby="@Html.DisplayName(abc+"a")" aria-expanded="false">
+                            <div class="panel-body panel_text faq-w3">
+                                @Html.DisplayFor(modelItem => item.faq_answers)
+                            </div>
+                        </div>
+                    </div>
+                }
+
+     
+                @*<div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h5 class="panel-title asd">
+                            <a class="pa_italic" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
+                               aria-controls="collapseOne">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><i class="glyphicon glyphicon-chevron-down" aria-hidden="true"></i>
+                                What is R-DTH?
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="true">
+                        <div class="panel-body panel_text faq-w3">
+                            DTH stands for Direct-To-Home television. DTH is defined as the reception of satellite programmes with a personal dish in an individual home. DTH does away with the need for the local cable operator and puts the broadcaster directly in touch with the consumer.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h5 class="panel-title asd">
+                            <a class="pa_italic collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+                               aria-controls="collapseTwo">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><i class="glyphicon glyphicon-chevron-down" aria-hidden="true"></i>How does R-DTH work?
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false"
+                         style="height: 0px;">
+                        <div class="panel-body panel_text faq-w3">
+                            R-DTH works through a set-top box (STB) and dish antenna which is installed at your home. The antenna is connected to the STB through a cable which is linked to the TV set. The STB decodes the signal from the antenna and brings your favourite channels to your TV screen.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h5 class="panel-title asd">
+                            <a class="pa_italic collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false"
+                               aria-controls="collapseThree">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><i class="w3ls-icon glyphicon glyphicon-chevron-down" aria-hidden="true"></i>Can R-DTH be viewed without disconnecting existing cable connection?
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree" aria-expanded="false"
+                         style="height: 0px;">
+                        <div class="panel-body panel_text faq-w3">
+                            Cable connection can be viewed in normal TV mode and DTH channels can be viewed in AV mode by choosing the AV option from the remote of your TV set. DTH channels can be changed using STB remote control.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingFour">
+                        <h5 class="panel-title asd">
+                            <a class="pa_italic collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false"
+                               aria-controls="collapseFour">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><i class="glyphicon glyphicon-chevron-down" aria-hidden="true"></i>Where can I see a R-DTH Demo?
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour" aria-expanded="false"
+                         style="height: 0px;">
+                        <div class="panel-body panel_text faq-w3">
+                            You can experience the new and exciting world of R-DTH through any R-DTH authorized dealer. Most of the consumer durable outlets near you, are authorized R-DTH dealers. You can also visit the Dealer section of our website to locate a dealer near you.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingFive">
+                        <h5 class="panel-title asd">
+                            <a class="pa_italic collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false"
+                               aria-controls="collapseFive">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><i class="glyphicon glyphicon-chevron-down" aria-hidden="true"></i>Once the Dish & STB are installed, will it be possible to receive all channels?
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive" aria-expanded="false"
+                         style="height: 0px;">
+                        <div class="panel-body panel_text faq-w3">
+                            Once the dish & STB are installed, you will need to activate a pack, through which you will get the channel that you have subscribed to.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingSix">
+                        <h5 class="panel-title asd">
+                            <a class="pa_italic collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false"
+                               aria-controls="collapseSix">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><i class="glyphicon glyphicon-chevron-down" aria-hidden="true"></i>Will the reception be affected by rains/snowfall?
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix" aria-expanded="false"
+                         style="height: 0px;">
+                        <div class="panel-body panel_text faq-w3">
+                            Though provision exists in the uplink system to take care of fading of the signal due to rains, yet heavy rains may result into outage for a few minutes in the DTH signal.
+                        </div>
+                    </div>
+                </div>*@
+            </div>
+        </div>
+    </div>
+</div>

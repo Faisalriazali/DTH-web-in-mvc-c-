@@ -1,0 +1,42 @@
+﻿@model R_DTH.Models.scratch_card
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>scratch_card</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.card_charges)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.card_charges)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.card_status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.card_status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.package.pack_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.package.pack_name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.card_number }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,58 @@
+﻿@model R_DTH.Models.customer_order
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>customer_order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.cusOrder_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cusOrder_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cusOrder_amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cusOrder_amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cusOrder_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cusOrder_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.customer.cus_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customer.cus_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.product.product_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.product.product_name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.cusOrder_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

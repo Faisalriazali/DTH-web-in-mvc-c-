@@ -1,0 +1,118 @@
+﻿@model IEnumerable<R_DTH.Models.scratch_card>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+    <!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Scratch Cards List
+        <small>Admin View</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i>Scratch Cards</a></li>
+        <li><a href="#">List</a></li>
+        <li class="active">View</li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+
+
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">
+                        @Html.ActionLink("Generate New Cards", "Create")
+
+                    </h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Card Number</th>
+                                <th>Card Charges</th>
+                                <th>Card Status</th>
+                                <th>Take Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.card_number)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.card_charges)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.card_status)
+                                        </td>
+                                        <td>
+                                            @Html.ActionLink("Delete", "Delete", new { id = item.card_number })
+                                        </td>
+                                    </tr>
+                                }
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Card Number</th>
+                                <th>Card Charges</th>
+                                <th>Card Status</th>
+                                <th>Take Action</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.card_charges)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.card_status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.package.pack_name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.card_charges)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.card_status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.package.pack_name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.card_number }) |
+            @Html.ActionLink("Details", "Details", new { id=item.card_number }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.card_number })
+        </td>
+    </tr>
+}
+
+</table>*@

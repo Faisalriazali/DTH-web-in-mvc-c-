@@ -1,0 +1,136 @@
+﻿@model IEnumerable<R_DTH.Models.dealer_order>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<section class="content-header">
+    <h1>
+        Dealer Orders
+        <small>Admin View</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i>Orders</a></li>
+        <li><a href="#">List</a></li>
+        <li class="active">View</li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+
+
+            <div class="box">
+                <div class="box-header">
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Order Date</th>
+                                <th>Dealer Name</th>
+                                <th>Product Name</th>
+                                <th>Quantity</th>
+                                <th>Amount</th>
+                                <th>Take Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.dealOrder_date)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.dealer.dealer_name)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.product.product_name)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.dealOrder_quantity)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.dealOrder_amount)
+                                            </td>
+                                            <td>
+                                                <a href="@Url.Action("", "", new { id = item.dealOrder_id })">Accept</a>  |
+                                                @Html.ActionLink("Delete", "Delete", new { id = item.dealOrder_id })
+                                            </td>
+                                        </tr>
+                                    }
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Order Date</th>
+                                <th>Dealer Name</th>
+                                <th>Product Name</th>
+                                <th>Quantity</th>
+                                <th>Amount</th>
+                                <th>Take Action</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.dealOrder_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dealOrder_amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dealOrder_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dealer.dealer_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.product.product_name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.dealOrder_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dealOrder_amount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dealOrder_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dealer.dealer_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.product.product_name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.dealOrder_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.dealOrder_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.dealOrder_id })
+        </td>
+    </tr>
+}
+
+</table>*@

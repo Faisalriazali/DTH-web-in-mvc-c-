@@ -1,0 +1,128 @@
+﻿@model IEnumerable<R_DTH.Models.feedback>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Feedback List
+        <small>Admin View</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i>Feedback</a></li>
+        <li><a href="#">List</a></li>
+        <li class="active">View</li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+
+
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">
+
+                    </h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Mobile #</th>
+                                <th>Email</th>
+                                <th>Message</th>
+                                <th>Take Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.fb_name)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.fb_mobile_)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.fb_email)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.fb_message)
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("Details", "Details", new { id = item.fb_id }) 
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Name</th>
+                                <th>Mobile #</th>
+                                <th>Email</th>
+                                <th>Message</th>
+                                <th>Take Action</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fb_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fb_mobile_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fb_email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fb_message)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.fb_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fb_mobile_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fb_email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fb_message)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.fb_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.fb_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.fb_id })
+        </td>
+    </tr>
+}
+
+</table>*@

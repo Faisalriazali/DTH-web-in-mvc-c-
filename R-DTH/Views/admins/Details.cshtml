@@ -1,0 +1,66 @@
+﻿@model R_DTH.Models.admin
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>admin</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.admin_name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.admin_name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.admin_contact_no)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.admin_contact_no)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.admin_email)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.admin_email)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.admin_password)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.admin_password)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.admin_address)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.admin_address)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.admin_id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

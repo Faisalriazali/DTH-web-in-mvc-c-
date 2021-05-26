@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_ThemeLayout.cshtml";
+}
+<!-- banner -->
+<div class="w3ls-banner contact-agileinfo">
+    <div class="container">
+        <h2 class="w3ls-title">Need help?</h2>
+        <h3 class="w3-subtitle">We're here for you!</h3>
+    </div>
+</div>
+<!-- //banner -->
+<!-- breadcrumbs -->
+<div class="w3layouts-breadcrumbs text-center">
+    <div class="container">
+        <span class="agile-breadcrumbs"><a href="@Url.Action("Index","Home")">Home</a> > <a href="@Url.Action("Contact","Home")">Customer Care</a> > <span>Dealers</span></span>
+    </div>
+</div>
+<!-- //breadcrumbs -->
+<div class="w3l-main-contact">
+    <div class="container">
+        <div class="col-md-3 w3_agileits-contact-inner">
+            <ul class="w3-inner-contact">
+                <li><a href="@Url.Action("Dealers","dealers")">dealers</a></li>
+                <li class="active"><a href="@Url.Action("Contact","Home")">contact us</a></li>
+                <li><a href="@Url.Action("Faq","faqs")">faq</a></li>
+            </ul>
+        </div>
+        <div class="col-md-9 agileinfo-contact-main-address">
+            <h4 class="w3ls-inner-title">R-DTH Digital TV</h4>
+            <div class="col-md-12 col-sm-12 col-xs-12 bb-address">
+                <h5>Head Office</h5>
+                <div class="w3ls-a1">
+                    <h6>Address:</h6>
+                    <p><i class="glyphicon glyphicon-home"></i> 14th-Ln, DHA, Phase7, Karachi, Pakistan.</p>
+                    <h6>Phone:</h6>
+                    <p><i class="glyphicon glyphicon-earphone"></i> +1234 567 567 </p>
+                    <p><i class="glyphicon glyphicon-phone"></i> +12 345 678 </p>
+                    <h6>Email:</h6>
+                    <p><i class="glyphicon glyphicon-envelope"></i> info@r-dth.com </p>
+                </div>
+            </div>
+            <div class="clearfix">	</div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>

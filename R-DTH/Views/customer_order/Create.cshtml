@@ -1,0 +1,104 @@
+﻿@model R_DTH.Models.customer_order
+
+@{
+    ViewBag.Title = "Customer Order";
+    Layout = "~/Views/Shared/_ThemeLayout.cshtml";
+}
+
+<div class="w3l-main-contact">
+    <div class="container">
+        <div class="agileinfo-contact-main-address">
+            <h4 class="w3ls-inner-title">Place Orders For Setup Boxes</h4>
+            <div class="agileits-main-right">
+                <h5>Complete Order Details.</h5>
+                @using (Html.BeginForm())
+            {
+                    @Html.AntiForgeryToken()
+
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="clearfix"></div>
+                    <div class="w3ls-text sec-right">
+                        <label class="contact-form-w3ls">Customer Name</label>
+                        <input type="hidden" class="form-control" name="cusOrder_customer" value="@Html.DisplayName(Session["CustomerId"].ToString())" />
+                        @Html.ValidationMessageFor(model => model.cusOrder_customer, "", new { @class = "text-danger" })
+                        <input type="text" class="form-control" name="customerName" value="@Html.DisplayName(Session["CustomerName"].ToString())" />
+                    </div>
+                    <div class="w3ls-text sec-right">
+                        <label class="contact-form-w3ls">Product</label>
+                        @Html.HiddenFor(model => model.cusOrder_product, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.EditorFor(model => model.cusOrder_productName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.cusOrder_product, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="w3ls-text sec-right">
+                        <label class="contact-form-w3ls">Quantity</label>
+                        @Html.EditorFor(model => model.cusOrder_quantity, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.cusOrder_quantity, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="clearfix"></div>
+                    <input type="submit" class="btn-info hover" style="margin-top:20px; padding:10px;" value="Order Now">
+                }
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+
+@*@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>customer_order</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.cusOrder_customer, "cusOrder_customer", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("cusOrder_customer", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.cusOrder_customer, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.cusOrder_product, "cusOrder_product", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("cusOrder_product", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.cusOrder_product, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.cusOrder_quantity, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.cusOrder_quantity, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.cusOrder_quantity, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.cusOrder_amount, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.cusOrder_amount, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.cusOrder_amount, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.cusOrder_date, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.cusOrder_date, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.cusOrder_date, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>*@

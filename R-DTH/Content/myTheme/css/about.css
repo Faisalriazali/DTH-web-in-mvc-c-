@@ -1,0 +1,104 @@
+.agileinfo-about {
+    background: #03b9f8;
+    padding: 3em 2em;
+    border-radius: 60px 0 60px 0;
+    margin: 5em 0;
+}
+h4.info {
+    color: #ffffff;
+    font-size: 2.1em;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    text-align: center;
+}
+.agileinfo-about-img {
+    padding: 0;
+}
+.agileinfo-about-txt {
+    padding: 0;
+    background: #006eb7;
+    min-height: 403px;
+}
+.agileinfo-about-txt h4 {
+    margin: 2.9em 0 0;
+    text-transform: capitalize;
+    font-weight: 800;
+    font-size: 3em;
+}
+/*-- home --*/
+.home_grids_w3,.grid_w3l {
+	padding:0;
+ }
+.gallery_grid {
+	margin: 2em 0 0;
+}
+.grid_w3l img {
+	width:100%;
+}
+.img1,.img2,.img3,.img4,.img5,.img6{
+	padding:0;
+	background-size: cover !important;
+}
+.img4 {
+	background: url(../images/dth.jpg) center; 
+}
+.img5 {
+	background: url(../images/6.jpg) center;
+}
+.img6 {
+	background: url(../images/7.jpg) center;
+}
+.img_text_w3ls {
+    padding: 9.15em 0;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+	background: rgba(78, 54, 54, 0.85);
+}
+.img5 .img_text_w3ls,.img1 .img_text_w3ls{
+	background:rgba(40, 141, 145, 0.69);
+}
+.img2 .img_text_w3ls,.img3 .img_text_w3ls,.img6 .img_text_w3ls{
+	background: rgba(0, 51, 102, 0.6);
+}
+.img4 .img_text_w3ls{
+	background:rgba(51, 102, 153, 0.6)
+}
+.img_text_w3ls h4 {
+	color: #fff;
+	font-size: 3em;
+	margin: 0;
+	font-weight: 700;
+	text-transform: capitalize;
+	letter-spacing: 2px;
+}
+.img_text_w3ls span {
+    width: 30%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.29);
+    display: inline-block;
+    margin: 1.5em 0 0.5em;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+}
+.img-grid:hover .img_text_w3ls span {
+    width: 50%;
+}
+.img_text_w3ls p {
+	color: #fff;
+	font-size: 1.3em;
+	margin: 0.5em;
+	letter-spacing: 2px;
+	text-transform: capitalize;
+	font-weight: 400;
+}
+.img-grid:hover .img_text_w3ls {
+    background: rgba(43, 91, 162, 0.2);
+}
+/*-- //home --*/

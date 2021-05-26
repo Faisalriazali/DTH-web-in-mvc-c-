@@ -1,0 +1,66 @@
+﻿@model R_DTH.Models.package_change_request
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>package_change_request</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.pcr_packId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pcr_packId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pcr_packName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pcr_packName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pcr_packCharges)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pcr_packCharges)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pcr_cusId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pcr_cusId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pcr_cusName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pcr_cusName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pcr_cusCardNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pcr_cusCardNo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.pcr_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

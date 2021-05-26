@@ -1,0 +1,90 @@
+﻿@model IEnumerable<R_DTH.Models.product>
+
+@{
+    ViewBag.Title = "Products";
+    Layout = "~/Views/Shared/_ThemeLayout.cshtml";
+}
+
+<div class="w3ls-banner products-agileinfo">
+    <div class="container">
+        <h2 class="w3ls-title">Hello To Future!</h2>
+        <h3 class="w3-subtitle">Experience the next level of incredible</h3>
+    </div>
+</div>
+<!-- //banner -->
+<!-- breadcrumbs -->
+<div class="w3layouts-breadcrumbs text-center">
+    <div class="container">
+        <span class="agile-breadcrumbs"><a href="@Url.Action("Index","Home")">Home</a> > <a href="@Url.Action("Products","Home")">Digital Cable Tv</a> > <span>Products</span></span>
+    </div>
+</div>
+<!-- //breadcrumbs -->
+<div class="container">
+    <div class="w3ls-section">
+        <div class="col-md-4 col-sm-4 col-xs-4 agileinfo-about-img abt-w3ls-btmimg">
+            <img src="~/Content/myTheme/images/about2.png" class="img-responsive" alt="" />
+        </div>
+        <div class="col-md-8 col-sm-8 col-xs-8 agileinfo-about">
+            <h4 class="info">Book Now and Get Additional Benefits</h4>
+        </div>
+        <div class="clearfix"></div>
+        <!-- services -->
+        <div id="services" class="services jarallax">
+
+            <h4 class="w3ls-inner-title">Choose Your Setup Box</h4>
+            <div class="w3-services-grids">
+
+                @{
+                    var k = 0;
+                }
+                    @foreach (var item in Model)
+                    {
+                    <div class="col-md-6 col-sm-6 col-xs-6  w3l-services-grid">
+                        <div class="">
+                            <img class="img-responsive" src="~/Content/AdminStuff/dist/img/@Html.DisplayFor(modelItem => item.product_img)" />
+                        </div>
+                        <div class="col-md-6 agileits-services-info">
+                            <ul class="packs-wthree">
+                                <li class="w3ls-services-img">
+                                    <h4>@Html.DisplayFor(modelItem => item.product_name)+</h4>
+                                    <p>
+                                        @Html.DisplayFor(modelItem => item.product_details)
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3>Price: Rs.@Html.DisplayFor(modelItem => item.product_charges)</h3>
+                                </li>
+                            </ul>
+                            @if (Session["CustomerName"] != null || Session["dealerName"] != null)
+                            {
+                                if (Session["CustomerName"] != null)
+                                {
+                                    <a href="@Url.Action("Create", "customer_order", new { id = item.product_id })" class="login" data-toggle="modal">get now</a>
+                                }
+                                else if (Session["dealerName"] != null)
+                                {
+                                    <a href="@Url.Action("Create", "dealer_order", new { id = item.product_id })" class="login" data-toggle="modal">get now</a>
+                                }
+
+                            }
+                            else
+                            {
+                                <li>Please Login for Placing Orders.</li>
+                            }
+                        </div>
+                    </div>
+                        k++;
+                        if (k == 2)
+                        {
+                            <div class="clearfix"> </div>
+                            k = 0;
+                        }
+                    }
+                <!-- //services -->
+            </div>
+        </div>
+    </div>
+
+</div>
+<div style="padding:20px;"></div>
+

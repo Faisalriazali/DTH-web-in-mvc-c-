@@ -1,0 +1,114 @@
+﻿@model R_DTH.Models.feedback
+
+@{
+    ViewBag.Title = "FeedBack";
+    Layout = "~/Views/Shared/_ThemeLayout.cshtml";
+}
+
+<div class="w3ls-banner contact-agileinfo">
+    <div class="container">
+        <h2 class="w3ls-title">Need help?</h2>
+        <h3 class="w3-subtitle">we're here for you!</h3>
+    </div>
+</div>
+<!-- //banner -->
+<!-- breadcrumbs -->
+<div class="w3layouts-breadcrumbs text-center">
+    <div class="container">
+        <span class="agile-breadcrumbs"><a href="@Url.Action("Index","Home")">Home</a> > <span>FeedBack</span></span>
+    </div>
+</div>
+<!-- //breadcrumbs -->
+<div class="w3l-main-contact">
+    <div class="container">
+        <div class="agileinfo-contact-main-address">
+            <h4 class="w3ls-inner-title">help at hand</h4>
+            <p>
+                We aim to provide our customers with best possible services. In case you have any suggestion / feedback,
+                we would be delightful to assist you at the earliest.
+            </p>
+            <div class="agileits-main-right">
+                <p><span>*</span>Marked fields are mandatory.</p>
+                <h5>Fill in your details</h5>
+                <form action="#" method="post" class="agile_form">
+                    @Html.AntiForgeryToken()
+
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="clearfix"></div>
+                        <div class="w3ls-text sec-right">
+                            <label class="contact-form-w3ls">Name<span>*</span></label>
+                            @Html.EditorFor(model => model.fb_name, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.fb_name, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="w3ls-text sec-right">
+                            <label class="contact-form-w3ls">Mobile no.<span>*</span></label>
+                            @Html.EditorFor(model => model.fb_mobile_, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.fb_mobile_, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="w3ls-text sec-right">
+                            <label class="contact-form-w3ls">Email<span>*</span></label>
+                            @Html.EditorFor(model => model.fb_email, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.fb_email, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="clearfix"></div>
+                        <label class="contact-form-w3ls">What would you like us to assist you with?<span>*</span></label>
+                        <textarea class="w3l_summary" name="fb_message" required=""></textarea>
+                        <input type="submit" value="Submit">
+</form>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+
+@*@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>feedback</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.fb_name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.fb_name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.fb_name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.fb_mobile_, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.fb_mobile_, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.fb_mobile_, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.fb_email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.fb_email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.fb_email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.fb_message, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.fb_message, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.fb_message, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>*@

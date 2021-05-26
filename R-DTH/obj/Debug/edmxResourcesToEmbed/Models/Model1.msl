@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="rdthModel1StoreContainer" CdmEntityContainer="rdthEntities1">
+    <EntitySetMapping Name="packages">
+      <EntityTypeMapping TypeName="rdthModel1.package">
+        <MappingFragment StoreEntitySet="package">
+          <ScalarProperty Name="pack_id" ColumnName="pack_id" />
+          <ScalarProperty Name="pack_name" ColumnName="pack_name" />
+          <ScalarProperty Name="pack_details" ColumnName="pack_details" />
+          <ScalarProperty Name="pack_charges" ColumnName="pack_charges" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

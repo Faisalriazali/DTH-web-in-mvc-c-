@@ -1,0 +1,144 @@
+﻿@model IEnumerable<R_DTH.Models.dealer>
+
+@{
+    ViewBag.Title = "Dealers";
+    Layout = "~/Views/Shared/_ThemeLayout.cshtml";
+}
+
+ <!-- banner -->
+<div class="w3ls-banner contact-agileinfo">
+    <div class="container">
+        <h2 class="w3ls-title">Need help?</h2>
+        <h3 class="w3-subtitle">We're here for you!</h3>
+    </div>
+</div>
+<!-- //banner -->
+<!-- breadcrumbs -->
+<div class="w3layouts-breadcrumbs text-center">
+    <div class="container">
+        <span class="agile-breadcrumbs"><a href="@Url.Action("Index","Home")">Home</a> > <a href="@Url.Action("Dealers","Home")">Customer Care</a> > <span>Dealers</span></span>
+    </div>
+</div>
+<!-- //breadcrumbs -->
+<!-- //banner -->
+<div class="w3l-main-contact">
+    <div class="container">
+        <div class="col-md-3 w3_agileits-contact-inner">
+            <ul class="w3-inner-contact">
+                <li class="active"><a href="@Url.Action("Dealers","dealers")">dealers</a></li>
+                <li><a href="@Url.Action("Contact","Home")">contact us</a></li>
+                <li><a href="@Url.Action("Faq","faqs")">faq</a></li>
+            </ul>
+        </div>
+        <div class="col-md-9 agileinfo-contact-main-address">
+            <div class="clearfix"></div>
+            <div class="agileinfo-contact-main-address">
+                <h6>R-DTH Digital TV  service providers</h6>
+                @foreach (var item in Model)
+                {
+                    String abc = "name" + item.dealer_id;
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="@Html.DisplayName(abc+"a")">
+                            <h5 class="panel-title asd">
+                                <a class="pa_italic collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#@Html.DisplayName(abc)" aria-expanded="false"
+                                   aria-controls="@Html.DisplayName(abc)">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><i class="glyphicon glyphicon-chevron-down" aria-hidden="true"></i>Dealer Near You
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="@Html.DisplayName(abc)" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false"
+                             style="height: 0px;">
+                            <div class="panel-body panel_text">
+                                <div class="w3three-contact-left">
+                                    <div class="address">
+                                        <h5>Address:</h5>
+                                        <p><i class="glyphicon glyphicon-home"></i> @Html.DisplayFor(modelItem => item.dealer_address)
+ </p>
+                                    </div>
+                                    <div class="address address-mdl">
+                                        <h5>Phone:</h5>
+                                        <p><i class="glyphicon glyphicon-earphone"></i> +9900887766</p>
+                                        <p><i class="glyphicon glyphicon-phone"></i> @Html.DisplayFor(modelItem => item.dealer_contact_no)
+</p>
+                                    </div>
+                                    <div class="address">
+                                        <h5>Email:</h5>
+                                        <p><i class="glyphicon glyphicon-envelope"></i> <a href="mailto:info@example.com">@Html.DisplayFor(modelItem => item.dealer_email)</a></p>
+                                    </div>
+                                </div>
+                                <img src="images/c3.png" class="img-responsive" alt="" />
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                    @*<div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h5 class="panel-title asd">
+                                <a class="pa_italic collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false"
+                                   aria-controls="collapseThree">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><i class="w3ls-icon glyphicon glyphicon-chevron-down" aria-hidden="true"></i>Dealer Near You
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree" aria-expanded="false"
+                             style="height: 0px;">
+                            <div class="panel-body panel_text">
+                                <div class="w3three-contact-left">
+                                    <div class="address">
+                                        <h5>Address:</h5>
+                                        <p><i class="glyphicon glyphicon-home"></i> 333 Broome St New York, NY 10002, </p>
+                                    </div>
+                                    <div class="address address-mdl">
+                                        <h5>Phone:</h5>
+                                        <p><i class="glyphicon glyphicon-earphone"></i> +9900887766</p>
+                                        <p><i class="glyphicon glyphicon-phone"></i> +11 222 333</p>
+                                    </div>
+                                    <div class="address">
+                                        <h5>Email:</h5>
+                                        <p><i class="glyphicon glyphicon-envelope"></i> <a href="mailto:info@example.com">mail@example.com</a></p>
+                                    </div>
+                                </div>
+                                <img src="images/c3.png" class="img-responsive" alt="" />
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h5 class="panel-title asd">
+                                <a class="pa_italic collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false"
+                                   aria-controls="collapseFour">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><i class="glyphicon glyphicon-chevron-down" aria-hidden="true"></i>Dealer Near You
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour" aria-expanded="false"
+                             style="height: 0px;">
+                            <div class="panel-body panel_text">
+                                <div class="w3three-contact-left">
+                                    <div class="address">
+                                        <h5>Address:</h5>
+                                        <p><i class="glyphicon glyphicon-home"></i> 333 Broome St New York, NY 10002, </p>
+                                    </div>
+                                    <div class="address address-mdl">
+                                        <h5>Phone:</h5>
+                                        <p><i class="glyphicon glyphicon-earphone"></i> +9900887766</p>
+                                        <p><i class="glyphicon glyphicon-phone"></i> +11 222 333</p>
+                                    </div>
+                                    <div class="address">
+                                        <h5>Email:</h5>
+                                        <p><i class="glyphicon glyphicon-envelope"></i> <a href="mailto:info@example.com">mail@example.com</a></p>
+                                    </div>
+                                </div>
+                                <img src="images/c3.png" class="img-responsive" alt="" />
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>*@
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

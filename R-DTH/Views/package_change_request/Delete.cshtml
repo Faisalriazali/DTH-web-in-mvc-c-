@@ -1,0 +1,72 @@
+﻿@model R_DTH.Models.package_change_request
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>package_change_request</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.pcr_packId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pcr_packId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pcr_packName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pcr_packName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pcr_packCharges)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pcr_packCharges)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pcr_cusId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pcr_cusId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pcr_cusName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pcr_cusName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pcr_cusCardNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pcr_cusCardNo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,140 @@
+﻿@model R_DTH.Models.feedback
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<section class="content-header">
+    <h1>
+        Feedback
+        <small>Admin View</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Feedback</a></li>
+        <li><a href="#">List</a></li>
+        <li class="active">Details</li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <br>
+    <br>
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-0">
+
+        </div>
+        <!--/.col (left) -->
+        <!-- right column -->
+        <div class="col-md-12">
+            <!-- Horizontal Form -->
+            <!-- general form elements disabled -->
+            <div class="box box-warning">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Feedback Details</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-8">
+                        <div>
+                            <h4>Feedback</h4>
+                            <hr />
+                            <dl class="dl-horizontal">
+                                <dt>
+                                    Name
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.fb_name)
+                                </dd>
+
+                                <dt>
+                                    Mobile#
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.fb_mobile_)
+                                </dd>
+
+                                <dt>
+                                   Email
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.fb_email)
+                                </dd>
+
+                                <dt>
+                                    Message
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.fb_message)
+                                </dd>
+
+                            </dl>
+                        </div>
+                        <p>
+                            @Html.ActionLink("Back to List", "Index")
+                        </p>
+
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!--/.col (right) -->
+    </div>
+    <!-- /.row -->
+</section>
+
+
+
+
+@*<div>
+    <h4>feedback</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.fb_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fb_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fb_mobile_)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fb_mobile_)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fb_email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fb_email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fb_message)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fb_message)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.fb_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@

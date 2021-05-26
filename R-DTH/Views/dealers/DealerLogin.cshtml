@@ -1,0 +1,56 @@
+﻿@model R_DTH.Models.dealer
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Customer - Login</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+    <link href="~/Content/Login/css/style.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+
+    <!-- Form Mixin-->
+    <!-- Input Mixin-->
+    <!-- Button Mixin-->
+    <!-- Pen Title-->
+    <div class="pen-title">
+        <h1>Dealer Login</h1>
+        <span>R-DTH Service</span>
+    </div>
+    <!-- Form Module-->
+    <div class="module form-module">
+        <div class="toggle" style="visibility:hidden;">
+        </div>
+        <div class="form">
+            <h2>Login to your account</h2>
+            @using (Html.BeginForm(FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <input type="text" placeholder="Username" name="dealer_email" />
+                <input type="password" placeholder="Password" name="dealer_password" />
+                <button type="submit">Login</button>
+            }
+        </div>
+        <div class="cta"><a href="http://andytran.me">@Html.DisplayFor(model => model.LoginErrorMessage)</a></div>
+    </div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://codepen.io/andytran/pen/vLmRVp.js'></script>
+
+    <script src="~/Content/Login/js/index.js"></script>
+</body>
+</html>
+

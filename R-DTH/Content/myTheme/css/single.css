@@ -1,0 +1,327 @@
+
+/*-- single --*/
+
+/*-- single-video --*/
+.show-top-grids-w3lagile {
+ padding: 1em 0 0 0;
+}
+
+/*-- social-icons --*/
+.single-agile-shar-buttons{
+	margin:1em 0 0 0;
+}
+.single-agile-shar-buttons ul{
+	padding:0;
+	margin:0;
+}
+.single-agile-shar-buttons ul li{
+    display: inline-block;
+    vertical-align: text-top;
+}
+.single-agile-shar-buttons ul li:nth-child(1) {
+    vertical-align: top;
+}
+.single-agile-shar-buttons ul li:nth-child(2) {
+    vertical-align: top;
+}
+.news-twitter a{
+	margin:1em 0 0 0 !important;
+}
+.share {
+    padding: 1em 0 0 1em;
+}
+.share h5 {
+    font-size: 1.3em;
+    color: #181818;
+    margin: 0 0 0em 0;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.single-agile-shar-buttons {
+    margin: 1em 0 0 0;
+}
+/*-- single --*/
+.single-main{
+	padding: 4em 1em 0 0;
+}
+.single-left {
+  padding-bottom: 2em;
+      padding-left: 0;
+}
+.all-comments{
+       margin: 1em 0 0 0;
+    padding-left: 0;
+    padding: 1em 1em;
+    box-shadow: 0px 0 2px #C1C1C1 !important;
+	-o-box-shadow: 0px 0 2px #C1C1C1 !important;
+	-moz-box-shadow: 0px 0 2px #C1C1C1 !important;
+	-ms-box-shadow: 0px 0 2px #C1C1C1 !important;
+}
+.all-comments-info a{
+    font-size: 14px;
+    color: #9E9E9E;
+    text-decoration: none;
+}
+.agile-info-wthree-box {
+  margin: 1em 0;
+}
+.agile-info-wthree-box input[type="text"], .agile-info-wthree-box textarea {
+    outline: none;
+    border: 1px solid #D4D3D3;
+    background: none;
+    padding: 10px 10px;
+    width: 60%;
+    font-size: 13px;
+}
+.agile-info-wthree-box input[type="text"]:nth-child(2) {
+    margin: 1em 0;
+}
+.agile-info-wthree-box textarea {
+       resize: none;
+    min-height: 100px;
+    margin: 1em 0;
+    width: 80%;
+}
+.agile-info-wthree-box form {
+    margin: 1em 0 0 0;
+}
+.agile-info-wthree-box input[type="submit"] {
+      outline: none;
+    font-style: normal;
+    padding: 8px 20px;
+    background: #1da1f2;
+    font-size: 14px;
+    color: #fff;
+    display: block;
+    border: none;
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    -o-transition: .5s all;
+    -ms-transition: .5s all;
+}
+.agile-info-wthree-box input[type="submit"]:hover{
+    text-decoration: none;
+    color: #fff;
+    background:#222;
+}
+.all-comments-buttons ul li a.newest{
+	position:relative;
+}
+.all-comments-buttons ul li a.top:hover{
+    color: #FFFFFF;
+       background: #ff8d1b;
+}
+.media-grids{
+	margin-top:4em;
+}
+.media {
+    margin: 4em 0;
+}
+.media h5 {
+      font-size: 1.2em;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    color: #2d2d2d;
+}
+.media h5 a {
+  color: #DF2229;
+}
+.media-body p{
+    font-size: 13px;
+    color: #757575;
+    margin: 0 0 .5em 0;
+    line-height: 1.5em;
+}
+.media-body span {
+    color: #C7C7C7;
+    font-size: 13px;
+}
+.media-body  span a {
+    color:#ff8d1b;
+    text-decoration: none;
+}
+.media:nth-child(3) {
+  padding-left: 4em;
+}
+.media:nth-child(5) {
+  padding-left: 4em;
+}
+.single-grid-right{
+	margin-top:2em;
+}
+.single-right-grids {
+    padding-bottom: 1.5em;
+}
+.single-right-grids:last-child {
+    margin-bottom: 1.5em;
+}
+.single-right-grid-left a img{
+	width:100%;
+}
+.single-right-grid-right a.title {
+    margin: 0 0 0em 0;
+    font-size: 1em;
+    font-weight: 400;
+    color: #212121;
+    text-decoration: none;
+}
+.single-right-grid-right a.title:hover{
+    text-decoration: underline;
+}
+.single-right-grid-right p.author {
+  font-size: 14px;
+  color: #9E9E9E;
+  margin: .5em 0;
+}
+.single-right-grid-right p.author {
+    font-size: 13px;
+    color: #9E9E9E;
+    margin: 0em 0;
+}
+.single-right-grid-right p.author a {
+    color: #ff8d1b;
+    text-decoration: none;
+    line-height: 2em;
+    font-size: 1em;
+}
+.single-right-grid-right p.views {
+    font-size: 12px;
+    color: #8c8c90;
+    margin: 0;
+}
+.single-right-grid-left {
+  padding-left: 0;
+}
+.single-right-grid-right{
+	padding-right:0;
+}
+/*-----start-responsive-design------*/
+
+@media (max-width:991px){
+	.single-left {
+		padding-bottom: 2em;
+		padding-left: 0;
+		float: none;
+		    width: 100%;
+	}
+	.single-right {
+		background: #f7f7f7;
+		padding:2em 1em 0 2em;
+		float: none;
+		width: 45%;
+		margin: 0 auto;
+	}
+	.single-right-grid-left a img {
+        width: 100%;
+		margin-bottom: 1em;
+	}
+}
+@media (max-width:667px){
+	.all-comments-buttons ul li {
+		display: inline-block;
+		margin: 0 0.5em;
+	}
+	.agile-info-wthree-box input[type="text"]:nth-child(2) {
+		margin: 0.5em 0;
+	}
+	.agile-info-wthree-box textarea {
+    margin: 0.5em 0;
+	}
+}
+@media (max-width:480px){
+	.single-right {
+		width: 60%;
+	}
+	.single-grid-right {
+		margin-top: 1em;
+	}
+	.agile-info-wthree-box input[type="text"], .agile-info-wthree-box textarea {
+		outline: none;
+		border: 1px solid #D4D3D3;
+		background: none;
+		padding: 10px 10px;
+		width: 100%;
+		font-size: 13px;
+	}
+	.media-grids {
+		margin-top: 2em;
+	}
+	.media h5 {
+		font-size: 1em;
+		font-weight: 400;
+		margin: 0 0 12px 0;
+	}
+}
+
+@media (max-width:414px){
+	.all-comments-buttons ul li {
+		display: inline-block;
+		margin: 0 0em;
+	}
+	.media {
+		margin: 2em 0;
+	}
+	.media:nth-child(3) {
+		padding-left: 2em;
+	}
+	.song-info h3 {
+		font-size: 20px;
+		margin: 0;
+		line-height: 0em;
+	}
+	.single-right {
+		padding: 1.5em 0 0 1em;
+		width: 80%;
+	}
+	
+}
+@media (max-width:384px){
+	.all-comments-buttons ul li a.top {
+		font-size: 13px;
+		padding: .5em 1em;
+	}
+	.song-info h3 {
+		font-size: 18px;
+	}
+}
+@media (max-width:375px){
+	.all-comments-buttons ul li a.top {
+		font-size: 13px;
+		padding: .5em 0.5em;
+	}
+	.song-info {
+		padding-left: 0;
+		padding:18px 0 0em;
+	}
+	.show-top-grids-w3lagile {
+		padding: 0em 0 0 0;
+	}
+}
+@media (max-width:320px){
+		.song-info {
+		padding-left: 0;
+		padding: 0px 0 0em;
+	}
+	.show-top-grids-w3lagile {
+		padding: 0em 0 0 0;
+	}
+	.song-info h3 {
+		font-size: 17px;
+		margin: 0;
+		line-height: 1.5em;
+	}
+	.all-comments {
+		margin: 1em 0 0 0;
+		padding-left: 0;
+		padding: 0.5em 0.5em;
+	}
+	.all-comments-buttons ul li a.top {
+		font-size: 13px;
+		padding: .4em 0.4em;
+	}
+	.single-right {
+		padding: 1.5em 0 0 1em;
+		width: 100%;
+	}
+}

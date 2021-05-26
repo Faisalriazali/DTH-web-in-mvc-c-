@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="dfae6fd061214b059ae3195baa55e84e" Name="Diagram1" >
+        <EntityTypeShape EntityType="rdthModel.package" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="rdthModel.customer" Width="1.5" PointX="0.625" PointY="3.25" />
+        <EntityTypeShape EntityType="rdthModel.dealer" Width="1.5" PointX="2.5" PointY="0.75" />
+        <EntityTypeShape EntityType="rdthModel.product" Width="1.5" PointX="4.25" PointY="0.75" />
+        <AssociationConnector Association="rdthModel.FK__customer__cus_pa__4CA06362" />
+        <EntityTypeShape EntityType="rdthModel.admin" Width="1.5" PointX="7.625" PointY="0.75" />
+        <EntityTypeShape EntityType="rdthModel.customer_order" Width="1.5" PointX="7.625" PointY="3" />
+        <EntityTypeShape EntityType="rdthModel.dealer_order" Width="1.5" PointX="6" PointY="0.75" />
+        <EntityTypeShape EntityType="rdthModel.faq" Width="1.5" PointX="9.375" PointY="4.75" />
+        <EntityTypeShape EntityType="rdthModel.Movy" Width="1.5" PointX="4.25" PointY="3.25" />
+        <AssociationConnector Association="rdthModel.FK__customer___cusOr__6FE99F9F" />
+        <AssociationConnector Association="rdthModel.FK__customer___cusOr__70DDC3D8" />
+        <AssociationConnector Association="rdthModel.FK__dealer_or__dealO__73BA3083" ></AssociationConnector>
+        <AssociationConnector Association="rdthModel.FK__dealer_or__dealO__74AE54BC" />
+        <EntityTypeShape EntityType="rdthModel.scratch_card" Width="1.5" PointX="2.375" PointY="4.125" />
+        <AssociationConnector Association="rdthModel.FK__scratch_c__card___02FC7413" />
+        <EntityTypeShape EntityType="rdthModel.feedback" Width="1.5" PointX="6" PointY="3.375" />
+        <EntityTypeShape EntityType="rdthModel.customer_card_number" Width="1.5" PointX="9.375" PointY="0.75" />
+        <EntityTypeShape EntityType="rdthModel.package_change_request" Width="1.5" PointX="9.375" PointY="2.25" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

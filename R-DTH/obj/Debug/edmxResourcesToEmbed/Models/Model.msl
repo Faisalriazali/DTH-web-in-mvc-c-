@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="rdthModelStoreContainer" CdmEntityContainer="rdthEntities">
+    <EntitySetMapping Name="packages">
+      <EntityTypeMapping TypeName="rdthModel.package">
+        <MappingFragment StoreEntitySet="package">
+          <ScalarProperty Name="pack_channel" ColumnName="pack_channel" />
+          <ScalarProperty Name="pack_charges" ColumnName="pack_charges" />
+          <ScalarProperty Name="pack_details" ColumnName="pack_details" />
+          <ScalarProperty Name="pack_name" ColumnName="pack_name" />
+          <ScalarProperty Name="pack_id" ColumnName="pack_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customers">
+      <EntityTypeMapping TypeName="rdthModel.customer">
+        <MappingFragment StoreEntitySet="customer">
+          <ScalarProperty Name="cus_payment_left" ColumnName="cus_payment_left" />
+          <ScalarProperty Name="cus_totalypaid" ColumnName="cus_totalypaid" />
+          <ScalarProperty Name="cus_sed" ColumnName="cus_sed" />
+          <ScalarProperty Name="cus_ssd" ColumnName="cus_ssd" />
+          <ScalarProperty Name="cus_address" ColumnName="cus_address" />
+          <ScalarProperty Name="cus_password" ColumnName="cus_password" />
+          <ScalarProperty Name="cus_email" ColumnName="cus_email" />
+          <ScalarProperty Name="cus_contact_no" ColumnName="cus_contact_no" />
+          <ScalarProperty Name="cus_package" ColumnName="cus_package" />
+          <ScalarProperty Name="cus_card_no" ColumnName="cus_card_no" />
+          <ScalarProperty Name="cus_name" ColumnName="cus_name" />
+          <ScalarProperty Name="cus_id" ColumnName="cus_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dealers">
+      <EntityTypeMapping TypeName="rdthModel.dealer">
+        <MappingFragment StoreEntitySet="dealers">
+          <ScalarProperty Name="dealer_payment_left" ColumnName="dealer_payment_left" />
+          <ScalarProperty Name="dealer_totalypaid" ColumnName="dealer_totalypaid" />
+          <ScalarProperty Name="dealer_address" ColumnName="dealer_address" />
+          <ScalarProperty Name="dealer_password" ColumnName="dealer_password" />
+          <ScalarProperty Name="dealer_email" ColumnName="dealer_email" />
+          <ScalarProperty Name="dealer_contact_no" ColumnName="dealer_contact_no" />
+          <ScalarProperty Name="dealer_name" ColumnName="dealer_name" />
+          <ScalarProperty Name="dealer_id" ColumnName="dealer_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="products">
+      <EntityTypeMapping TypeName="rdthModel.product">
+        <MappingFragment StoreEntitySet="products">
+          <ScalarProperty Name="product_charges" ColumnName="product_charges" />
+          <ScalarProperty Name="product_img" ColumnName="product_img" />
+          <ScalarProperty Name="product_details" ColumnName="product_details" />
+          <ScalarProperty Name="product_name" ColumnName="product_name" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="admins">
+      <EntityTypeMapping TypeName="rdthModel.admin">
+        <MappingFragment StoreEntitySet="admins">
+          <ScalarProperty Name="admin_address" ColumnName="admin_address" />
+          <ScalarProperty Name="admin_password" ColumnName="admin_password" />
+          <ScalarProperty Name="admin_email" ColumnName="admin_email" />
+          <ScalarProperty Name="admin_contact_no" ColumnName="admin_contact_no" />
+          <ScalarProperty Name="admin_name" ColumnName="admin_name" />
+          <ScalarProperty Name="admin_id" ColumnName="admin_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customer_order">
+      <EntityTypeMapping TypeName="rdthModel.customer_order">
+        <MappingFragment StoreEntitySet="customer_order">
+          <ScalarProperty Name="cusOrder_date" ColumnName="cusOrder_date" />
+          <ScalarProperty Name="cusOrder_amount" ColumnName="cusOrder_amount" />
+          <ScalarProperty Name="cusOrder_quantity" ColumnName="cusOrder_quantity" />
+          <ScalarProperty Name="cusOrder_product" ColumnName="cusOrder_product" />
+          <ScalarProperty Name="cusOrder_customer" ColumnName="cusOrder_customer" />
+          <ScalarProperty Name="cusOrder_id" ColumnName="cusOrder_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dealer_order">
+      <EntityTypeMapping TypeName="rdthModel.dealer_order">
+        <MappingFragment StoreEntitySet="dealer_order">
+          <ScalarProperty Name="dealOrder_date" ColumnName="dealOrder_date" />
+          <ScalarProperty Name="dealOrder_amount" ColumnName="dealOrder_amount" />
+          <ScalarProperty Name="dealOrder_quantity" ColumnName="dealOrder_quantity" />
+          <ScalarProperty Name="dealOrder_product" ColumnName="dealOrder_product" />
+          <ScalarProperty Name="dealOrder_dealer" ColumnName="dealOrder_dealer" />
+          <ScalarProperty Name="dealOrder_id" ColumnName="dealOrder_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="faqs">
+      <EntityTypeMapping TypeName="rdthModel.faq">
+        <MappingFragment StoreEntitySet="faqs">
+          <ScalarProperty Name="faq_answers" ColumnName="faq_answers" />
+          <ScalarProperty Name="faq_question" ColumnName="faq_question" />
+          <ScalarProperty Name="faq_id" ColumnName="faq_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Movies">
+      <EntityTypeMapping TypeName="rdthModel.Movy">
+        <MappingFragment StoreEntitySet="Movies">
+          <ScalarProperty Name="movie_charges" ColumnName="movie_charges" />
+          <ScalarProperty Name="movie_timing2" ColumnName="movie_timing2" />
+          <ScalarProperty Name="movie_timing1" ColumnName="movie_timing1" />
+          <ScalarProperty Name="movie_duration" ColumnName="movie_duration" />
+          <ScalarProperty Name="movie_channelNo" ColumnName="movie_channelNo" />
+          <ScalarProperty Name="movie_availablity" ColumnName="movie_availablity" />
+          <ScalarProperty Name="movie_language" ColumnName="movie_language" />
+          <ScalarProperty Name="movie_image" ColumnName="movie_image" />
+          <ScalarProperty Name="movie_name" ColumnName="movie_name" />
+          <ScalarProperty Name="movie_id" ColumnName="movie_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="scratch_card">
+      <EntityTypeMapping TypeName="rdthModel.scratch_card">
+        <MappingFragment StoreEntitySet="scratch_card">
+          <ScalarProperty Name="card_status" ColumnName="card_status" />
+          <ScalarProperty Name="card_charges" ColumnName="card_charges" />
+          <ScalarProperty Name="card_package" ColumnName="card_package" />
+          <ScalarProperty Name="card_number" ColumnName="card_number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="feedbacks">
+      <EntityTypeMapping TypeName="rdthModel.feedback">
+        <MappingFragment StoreEntitySet="feedback">
+          <ScalarProperty Name="fb_message" ColumnName="fb_message" />
+          <ScalarProperty Name="fb_email" ColumnName="fb_email" />
+          <ScalarProperty Name="fb_mobile_" ColumnName="fb_mobile#" />
+          <ScalarProperty Name="fb_name" ColumnName="fb_name" />
+          <ScalarProperty Name="fb_id" ColumnName="fb_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customer_card_number">
+      <EntityTypeMapping TypeName="rdthModel.customer_card_number">
+        <MappingFragment StoreEntitySet="customer_card_number">
+          <ScalarProperty Name="ccn_numbers" ColumnName="ccn_numbers" />
+          <ScalarProperty Name="ccn_id" ColumnName="ccn_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="package_change_request">
+      <EntityTypeMapping TypeName="rdthModel.package_change_request">
+        <MappingFragment StoreEntitySet="package_change_request">
+          <ScalarProperty Name="pcr_cusCardNo" ColumnName="pcr_cusCardNo" />
+          <ScalarProperty Name="pcr_cusName" ColumnName="pcr_cusName" />
+          <ScalarProperty Name="pcr_cusId" ColumnName="pcr_cusId" />
+          <ScalarProperty Name="pcr_packCharges" ColumnName="pcr_packCharges" />
+          <ScalarProperty Name="pcr_packName" ColumnName="pcr_packName" />
+          <ScalarProperty Name="pcr_packId" ColumnName="pcr_packId" />
+          <ScalarProperty Name="pcr_id" ColumnName="pcr_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

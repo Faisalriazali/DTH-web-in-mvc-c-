@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "R-DTH | Best Satellite TV and Packages Offer";
+    Layout = "~/Views/Shared/_IndexLayout.cshtml";
+}
+
+
+<div class="container">
+    <!-- services section -->
+    <div class="w3ls-section w3_agileits-services" id="services">
+        <h4 class="w3ls-inner-title">welcome to R-DTH - Best Digital TV </h4>
+        <p>R-DTH is the nation’s preferred DTH provider with more than 12 Million subscribers. We offer over 200+ channels across all languages. This experience is enhanced with our recording facility, where you can pause, rewind and play your programs when you find time and this is absolutely free! We help you to choose the best DTH Packages by providing recharge plan with prices to suit every budget and requirement. Not stopping at this, we have an easy three step process for online recharge which make life so much more simple.</p>&nbsp;
+        <p>R-DTH is the first to have adopted the advanced MPEG-4 technology that offers better compression and signal quality. It is also the first to have offered High Definition (HD) content, for a whole new television viewing experience. Today, R-DTH has spread rapidly all over the country and offers the best entertainment value in regional content coupled with advanced yet affordable products like set top boxes with USB recordings.</p>
+    </div>
+
+   
+   
+            <script src="~/Content/myTheme/js/responsiveslides.min.js"></script>
+            <script>
+                // You can also use "$(window).load(function() {"
+                $(function () {
+                    // Slideshow 4
+                    $("#slider4").responsiveSlides({
+                        auto: true,
+                        pager: true,
+                        nav: true,
+                        speed: 500,
+                        namespace: "callbacks",
+                        before: function () {
+                            $('.events').append("<li>before event fired.</li>");
+                        },
+                        after: function () {
+                            $('.events').append("<li>after event fired.</li>");
+                        }
+                    });
+
+                });
+            </script>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+   
+    <div class="w3ls-section products-main-agile">
+        <div class="col-md-6 col-sm-4 abt-w3ls-btmimg">
+            <img src="~/Content/myTheme/images/box.png" class="img-responsive" alt="" />
+        </div>
+        <div class="col-md-6  col-sm-8 product-last">
+            <h3 class="hd-title">R-DTH now available on</h3>
+            <div class="banner-button">
+                <a href="https://play.google.com/store?hl=en" target="_blank"><img src="~/Content/myTheme/images/1.png" alt=""></a>
+            </div>
+            <div class="banner-button green-button">
+                <a href="https://itunes.apple.com/us/genre/ios/id36?mt=8" target="_blank"> <img src="~/Content/myTheme/images/2.png" alt=""></a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+    <!-- //Stats -->

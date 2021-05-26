@@ -1,0 +1,86 @@
+﻿@model IEnumerable<R_DTH.Models.package>
+
+@{
+    ViewBag.Title = "Packages";
+    Layout = "~/Views/Shared/_ThemeLayout.cshtml";
+}
+
+<div class="w3ls-banner products-agileinfo">
+    <div class="container">
+        <h2 class="w3ls-title">3D Visual.</h2>
+        <h3 class="w3-subtitle">Feel the Beauty!</h3>
+    </div>
+</div>
+<!-- //banner -->
+<!-- breadcrumbs -->
+<div class="w3layouts-breadcrumbs text-center">
+    <div class="container">
+        <span class="agile-breadcrumbs"><a href="@Url.Action("Index","Home")">Home</a> > <a href="@Url.Action("Packages","Home")">Digital Cable Tv</a> > <span>Packages</span></span>
+    </div>
+</div>
+<!-- //breadcrumbs -->  
+<div class="container">
+    <div class="w3ls-section">
+        <div class="col-md-4 col-sm-4 col-xs-4 agileinfo-about-img abt-w3ls-btmimg">
+            <img src="~/Content/myTheme/images/about2.png" class="img-responsive" alt="" />
+        </div>
+        <div class="col-md-8 col-sm-8 col-xs-8 agileinfo-about">
+            <h4 class="info">Get the best of DTH channels on your TV</h4>
+        </div>
+        <div class="clearfix"></div>
+        <!-- services -->
+        <div id="services" class="services jarallax">
+
+            <h4 class="w3ls-inner-title">Entertainment Packages</h4>
+            <div class="w3-services-grids">               
+                @{ 
+                    var k = 0;
+                }
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-6 col-sm-6 col-xs-6  w3l-services-grid">
+                        <div class="col-md-6 w3ls-services-img">
+                            <i class="fa fa-television" aria-hidden="true"></i>
+                            <h4>@Html.DisplayFor(modelItem => item.pack_name)</h4>
+                            <h5>@Html.DisplayFor(modelItem => item.pack_channel)<sup>+</sup> HD Channels</h5>
+                            <p>@Html.DisplayFor(modelItem => item.pack_details)</p>
+                        </div>
+                        <div class="col-md-6 agileits-services-info">
+                            <h6 class="w3ls-pack-title">Take Service In Just</h6>
+                            <ul class="packs-wthree">
+                                <li>
+                                    <input type="radio" name="view" id="poor">
+                                    <label for="poor">Rs.@Html.DisplayFor(modelItem => item.pack_charges) /<sub>month</sub></label>
+                                    <div class="check w3_agileits"></div>
+                                </li>
+                            </ul>
+                            @if (Session["CustomerName"]!=null)
+                            {
+                                <a href="@Url.Action("Create","package_change_request", new { id=item.pack_id })" class="login" data-toggle="modal">get now</a>
+                            }
+                            else
+                            {
+                                <a href="@Url.Action("CustomerLogin","customers")" class="login" data-toggle="modal">get now</a>
+                            }
+                        </div>
+                    </div>
+                    k++;
+                    if (k == 2)
+                    {
+                        <div class="clearfix"> </div>
+                        k = 0;
+                    }
+
+                }
+                
+
+
+
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <!-- //services -->
+
+    </div>
+
+</div>

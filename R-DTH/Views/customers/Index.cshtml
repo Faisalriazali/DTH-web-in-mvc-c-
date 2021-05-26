@@ -1,0 +1,171 @@
+﻿@model IEnumerable<R_DTH.Models.customer>
+
+@{
+    ViewBag.Title = "Customer";
+}
+
+<section class="content-header">
+    <h1>
+        Customer List
+        <small>Admin View</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i>Customer</a></li>
+        <li><a href="#">List</a></li>
+        <li class="active">View</li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+
+
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">
+                        @Html.ActionLink("Add New Customer", "Create")
+
+                    </h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Customer Name</th>
+                                <th>Customer Card#</th>
+                                <th>Customer Package</th>
+                                <th>Customer Email</th>
+                                <th>Take Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model) {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.cus_name)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.cus_card_no)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.package.pack_name)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.cus_email)
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("Edit", "Edit", new { id=item.cus_id }) |
+                                        @Html.ActionLink("Details", "Details", new { id=item.cus_id }) |
+                                        @Html.ActionLink("Delete", "Delete", new { id=item.cus_id })
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Customer Name</th>
+                                <th>Customer Card#</th>
+                                <th>Customer Package</th>
+                                <th>Customer Email</th>
+                                <th>Take Action</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.cus_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cus_card_no)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cus_contact_no)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cus_email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cus_password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cus_address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cus_ssd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cus_sed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cus_totalypaid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cus_payment_left)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.package.pack_name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.cus_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cus_card_no)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cus_contact_no)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cus_email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cus_password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cus_address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cus_ssd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cus_sed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cus_totalypaid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cus_payment_left)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.package.pack_name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.cus_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.cus_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.cus_id })
+        </td>
+    </tr>
+}
+
+</table>*@

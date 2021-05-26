@@ -1,0 +1,110 @@
+﻿@model IEnumerable<R_DTH.Models.faq>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+    <!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        FAQ List
+        <small>Admin View</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i>FAQ</a></li>
+        <li><a href="#">List</a></li>
+        <li class="active">View</li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+
+
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">
+                        @Html.ActionLink("Add New FAQs", "Create")
+
+                    </h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Question</th>
+                                <th>Answers</th>
+                                <th>Take Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td width="200">
+                                        @Html.DisplayFor(modelItem => item.faq_question)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.faq_answers)
+                                    </td>
+                                    <td width="150">
+                                        @Html.ActionLink("Edit", "Edit", new { id = item.faq_id }) |
+                                        @Html.ActionLink("Details", "Details", new { id = item.faq_id }) |
+                                        @Html.ActionLink("Delete", "Delete", new { id = item.faq_id })
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Question</th>
+                                <th>Answers</th>
+                                <th>Take Action</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.faq_question)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.faq_answers)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.faq_question)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.faq_answers)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.faq_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.faq_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.faq_id })
+        </td>
+    </tr>
+}
+
+</table>*@

@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="rdthModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="admins">
+    <Key>
+      <PropertyRef Name="admin_id" />
+    </Key>
+    <Property Name="admin_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="admin_name" Type="varchar" MaxLength="50" />
+    <Property Name="admin_contact_no" Type="bigint" />
+    <Property Name="admin_email" Type="varchar" MaxLength="50" />
+    <Property Name="admin_password" Type="varchar" MaxLength="50" />
+    <Property Name="admin_address" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="cus_id" />
+    </Key>
+    <Property Name="cus_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cus_name" Type="varchar" MaxLength="50" />
+    <Property Name="cus_card_no" Type="int" />
+    <Property Name="cus_package" Type="int" />
+    <Property Name="cus_contact_no" Type="bigint" />
+    <Property Name="cus_email" Type="varchar" MaxLength="50" />
+    <Property Name="cus_password" Type="varchar" MaxLength="50" />
+    <Property Name="cus_address" Type="varchar" MaxLength="100" />
+    <Property Name="cus_ssd" Type="date" />
+    <Property Name="cus_sed" Type="date" />
+    <Property Name="cus_totalypaid" Type="bigint" />
+    <Property Name="cus_payment_left" Type="int" />
+  </EntityType>
+  <EntityType Name="customer_card_number">
+    <Key>
+      <PropertyRef Name="ccn_id" />
+    </Key>
+    <Property Name="ccn_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ccn_numbers" Type="bigint" />
+  </EntityType>
+  <EntityType Name="customer_order">
+    <Key>
+      <PropertyRef Name="cusOrder_id" />
+    </Key>
+    <Property Name="cusOrder_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cusOrder_customer" Type="int" />
+    <Property Name="cusOrder_product" Type="int" />
+    <Property Name="cusOrder_quantity" Type="int" />
+    <Property Name="cusOrder_amount" Type="int" />
+    <Property Name="cusOrder_date" Type="date" />
+  </EntityType>
+  <EntityType Name="dealer_order">
+    <Key>
+      <PropertyRef Name="dealOrder_id" />
+    </Key>
+    <Property Name="dealOrder_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dealOrder_dealer" Type="int" />
+    <Property Name="dealOrder_product" Type="int" />
+    <Property Name="dealOrder_quantity" Type="int" />
+    <Property Name="dealOrder_amount" Type="int" />
+    <Property Name="dealOrder_date" Type="date" />
+  </EntityType>
+  <EntityType Name="dealers">
+    <Key>
+      <PropertyRef Name="dealer_id" />
+    </Key>
+    <Property Name="dealer_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dealer_name" Type="varchar" MaxLength="50" />
+    <Property Name="dealer_contact_no" Type="bigint" />
+    <Property Name="dealer_email" Type="varchar" MaxLength="50" />
+    <Property Name="dealer_password" Type="varchar" MaxLength="50" />
+    <Property Name="dealer_address" Type="varchar" MaxLength="100" />
+    <Property Name="dealer_totalypaid" Type="bigint" />
+    <Property Name="dealer_payment_left" Type="int" />
+  </EntityType>
+  <EntityType Name="faqs">
+    <Key>
+      <PropertyRef Name="faq_id" />
+    </Key>
+    <Property Name="faq_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="faq_question" Type="text" />
+    <Property Name="faq_answers" Type="text" />
+  </EntityType>
+  <EntityType Name="feedback">
+    <Key>
+      <PropertyRef Name="fb_id" />
+    </Key>
+    <Property Name="fb_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fb_name" Type="varchar" MaxLength="50" />
+    <Property Name="fb_mobile#" Type="varchar" MaxLength="50" />
+    <Property Name="fb_email" Type="varchar" MaxLength="50" />
+    <Property Name="fb_message" Type="text" />
+  </EntityType>
+  <EntityType Name="Movies">
+    <Key>
+      <PropertyRef Name="movie_id" />
+    </Key>
+    <Property Name="movie_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="movie_name" Type="varchar" MaxLength="100" />
+    <Property Name="movie_image" Type="text" />
+    <Property Name="movie_language" Type="varchar" MaxLength="50" />
+    <Property Name="movie_availablity" Type="varchar" MaxLength="50" />
+    <Property Name="movie_channelNo" Type="int" />
+    <Property Name="movie_duration" Type="varchar" MaxLength="50" />
+    <Property Name="movie_timing1" Type="varchar" MaxLength="50" />
+    <Property Name="movie_timing2" Type="varchar" MaxLength="50" />
+    <Property Name="movie_charges" Type="int" />
+  </EntityType>
+  <EntityType Name="package">
+    <Key>
+      <PropertyRef Name="pack_id" />
+    </Key>
+    <Property Name="pack_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pack_name" Type="varchar" MaxLength="50" />
+    <Property Name="pack_details" Type="text" />
+    <Property Name="pack_charges" Type="int" />
+    <Property Name="pack_channel" Type="int" />
+  </EntityType>
+  <EntityType Name="package_change_request">
+    <Key>
+      <PropertyRef Name="pcr_id" />
+    </Key>
+    <Property Name="pcr_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pcr_packId" Type="int" />
+    <Property Name="pcr_packName" Type="varchar" MaxLength="50" />
+    <Property Name="pcr_packCharges" Type="int" />
+    <Property Name="pcr_cusId" Type="int" />
+    <Property Name="pcr_cusName" Type="varchar" MaxLength="50" />
+    <Property Name="pcr_cusCardNo" Type="bigint" />
+  </EntityType>
+  <EntityType Name="products">
+    <Key>
+      <PropertyRef Name="product_id" />
+    </Key>
+    <Property Name="product_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="product_name" Type="varchar" MaxLength="50" />
+    <Property Name="product_details" Type="text" />
+    <Property Name="product_img" Type="text" />
+    <Property Name="product_charges" Type="int" />
+  </EntityType>
+  <EntityType Name="scratch_card">
+    <Key>
+      <PropertyRef Name="card_number" />
+    </Key>
+    <Property Name="card_number" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="card_package" Type="int" />
+    <Property Name="card_charges" Type="int" />
+    <Property Name="card_status" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <Association Name="FK__customer___cusOr__6FE99F9F">
+    <End Role="customer" Type="Self.customer" Multiplicity="0..1" />
+    <End Role="customer_order" Type="Self.customer_order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="cus_id" />
+      </Principal>
+      <Dependent Role="customer_order">
+        <PropertyRef Name="cusOrder_customer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__customer___cusOr__70DDC3D8">
+    <End Role="products" Type="Self.products" Multiplicity="0..1" />
+    <End Role="customer_order" Type="Self.customer_order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="products">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="customer_order">
+        <PropertyRef Name="cusOrder_product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__customer__cus_pa__4CA06362">
+    <End Role="package" Type="Self.package" Multiplicity="0..1" />
+    <End Role="customer" Type="Self.customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="package">
+        <PropertyRef Name="pack_id" />
+      </Principal>
+      <Dependent Role="customer">
+        <PropertyRef Name="cus_package" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__dealer_or__dealO__73BA3083">
+    <End Role="dealers" Type="Self.dealers" Multiplicity="0..1" />
+    <End Role="dealer_order" Type="Self.dealer_order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dealers">
+        <PropertyRef Name="dealer_id" />
+      </Principal>
+      <Dependent Role="dealer_order">
+        <PropertyRef Name="dealOrder_dealer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__dealer_or__dealO__74AE54BC">
+    <End Role="products" Type="Self.products" Multiplicity="0..1" />
+    <End Role="dealer_order" Type="Self.dealer_order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="products">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="dealer_order">
+        <PropertyRef Name="dealOrder_product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__scratch_c__card___02FC7413">
+    <End Role="package" Type="Self.package" Multiplicity="0..1" />
+    <End Role="scratch_card" Type="Self.scratch_card" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="package">
+        <PropertyRef Name="pack_id" />
+      </Principal>
+      <Dependent Role="scratch_card">
+        <PropertyRef Name="card_package" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="rdthModelStoreContainer">
+    <EntitySet Name="admins" EntityType="Self.admins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="customer" EntityType="Self.customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="customer_card_number" EntityType="Self.customer_card_number" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="customer_order" EntityType="Self.customer_order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="dealer_order" EntityType="Self.dealer_order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="dealers" EntityType="Self.dealers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="faqs" EntityType="Self.faqs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="feedback" EntityType="Self.feedback" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Movies" EntityType="Self.Movies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="package" EntityType="Self.package" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="package_change_request" EntityType="Self.package_change_request" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="products" EntityType="Self.products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="scratch_card" EntityType="Self.scratch_card" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__customer___cusOr__6FE99F9F" Association="Self.FK__customer___cusOr__6FE99F9F">
+      <End Role="customer" EntitySet="customer" />
+      <End Role="customer_order" EntitySet="customer_order" />
+    </AssociationSet>
+    <AssociationSet Name="FK__customer___cusOr__70DDC3D8" Association="Self.FK__customer___cusOr__70DDC3D8">
+      <End Role="products" EntitySet="products" />
+      <End Role="customer_order" EntitySet="customer_order" />
+    </AssociationSet>
+    <AssociationSet Name="FK__customer__cus_pa__4CA06362" Association="Self.FK__customer__cus_pa__4CA06362">
+      <End Role="package" EntitySet="package" />
+      <End Role="customer" EntitySet="customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__dealer_or__dealO__73BA3083" Association="Self.FK__dealer_or__dealO__73BA3083">
+      <End Role="dealers" EntitySet="dealers" />
+      <End Role="dealer_order" EntitySet="dealer_order" />
+    </AssociationSet>
+    <AssociationSet Name="FK__dealer_or__dealO__74AE54BC" Association="Self.FK__dealer_or__dealO__74AE54BC">
+      <End Role="products" EntitySet="products" />
+      <End Role="dealer_order" EntitySet="dealer_order" />
+    </AssociationSet>
+    <AssociationSet Name="FK__scratch_c__card___02FC7413" Association="Self.FK__scratch_c__card___02FC7413">
+      <End Role="package" EntitySet="package" />
+      <End Role="scratch_card" EntitySet="scratch_card" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

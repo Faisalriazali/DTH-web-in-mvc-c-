@@ -1,0 +1,153 @@
+﻿@model R_DTH.Models.customer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<section class="content-header">
+    <h1>
+        <small>Admin View</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Customer</a></li>
+        <li><a href="#">List</a></li>
+        <li class="active">Details</li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <br>
+    <br>
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-0">
+
+        </div>
+        <!--/.col (left) -->
+        <!-- right column -->
+        <div class="col-md-12">
+            <!-- Horizontal Form -->
+            <!-- general form elements disabled -->
+            <div class="box box-warning">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Customer Details</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-8">
+                        <div>
+                            <h4>customer</h4>
+                            <hr />
+                            <dl class="dl-horizontal">
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.cus_name)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.cus_name)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.cus_card_no)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.cus_card_no)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.cus_contact_no)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.cus_contact_no)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.cus_email)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.cus_email)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.cus_password)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.cus_password)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.cus_address)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.cus_address)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.cus_ssd)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.cus_ssd)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.cus_sed)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.cus_sed)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.cus_totalypaid)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.cus_totalypaid)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.cus_payment_left)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.cus_payment_left)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.package.pack_name)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.package.pack_name)
+                                </dd>
+
+                            </dl>
+                        </div>
+                        <p>
+                            @Html.ActionLink("Edit", "Edit", new { id = Model.cus_id }) |
+                            @Html.ActionLink("Back to List", "Index")
+                        </p>
+
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!--/.col (right) -->
+    </div>
+    <!-- /.row -->
+</section>
+
+
+

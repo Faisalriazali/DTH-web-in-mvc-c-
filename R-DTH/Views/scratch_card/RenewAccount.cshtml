@@ -1,0 +1,144 @@
+﻿@model R_DTH.Models.scratch_card
+
+@{
+    ViewBag.Title = "RenewAccount";
+    Layout = "~/Views/Shared/_ThemeLayout.cshtml";
+}
+
+<div class="w3ls-banner text-center">
+    <div class="container">
+        <h2 class="wthree-title">time to go digital</h2>
+        <h3 class="wthree-subtitle">making a better world</h3>
+    </div>
+</div>
+<!-- //banner -->
+<!-- breadcrumbs -->
+<div class="w3layouts-breadcrumbs text-center">
+    <div class="container">
+        <span class="agile-breadcrumbs"><a href="index.html">Home</a> > <a href="products.html">Digital Cable Tv</a> > <span>Quick pay</span></span>
+    </div>
+</div>
+<!-- //breadcrumbs -->
+<div class="container">
+    <div class="w3ls-section">
+        <!-- services -->
+        <div id="w3l-payment-pg" class="w3l-payment-pg ">
+            <div class="container">
+                <h4 class="w3ls-inner-title">Renew your account @Html.DisplayFor(model => model.LoginErrorMessage)</h4>
+                <div class="content-wthree">
+                    <div id="horizontalTab">
+                        <ul class="resp-tabs-list">
+                            <li class="w3-pay-active">Enter Details </li>
+                        </ul>
+                        <div class="resp-tabs-container">
+                            <div class="tab1 active">
+@using (Html.BeginForm(FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                    if (Session["CustomerName"] != null)
+                                    {
+                                    <div class="w3ls-text sec-left">
+                                        <label class="contact-form-w3ls" style="color:white">Customer ID</label>
+                                        <input placeholder="Enter your Customer Id. " name="customerId" type="number"  class="form-control" required="" value="@Html.DisplayName(Session["CustomerId"].ToString())">
+                                    </div>
+                                    <div class="w3ls-text sec-right">
+                                        <label class="contact-form-w3ls" style="color:white">Service Card No.</label>
+                                        <input placeholder="Enter your Service Card No" name="first name"  class="form-control" type="number" required="" value="@Html.DisplayName(Session["CustomerCardNo"].ToString())">
+                                    </div>
+                                    }
+                                    else
+                                    {
+                                        <div class="w3ls-text sec-left">
+                                            <label class="contact-form-w3ls" style="color:white">Customer ID</label>
+                                            <input placeholder="Enter your Customer Id. " class="form-control" name="customerId" type="number" required="" >
+                                        </div>
+                                    }
+                                    <div class="clearfix"></div>
+                                    <div class="w3ls-text sec-left">
+                                        <label class="contact-form-w3ls" style="color:white">Scarch Card No.</label>
+                                        <input placeholder="Enter your SCN " name="card_check" type="number" required=""  class="form-control">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="w3ls-pay-submit">
+                                        <input type="submit" class="btn-default round btn-lg" value="Renew">
+                                    </div>
+}
+                            </div>
+
+                            <div class="tab2">
+                                <form action="#" method="post" class="agile_form">
+                                    <div class="w3ls-text sec-left">
+                                        <label class="contact-form-w3ls">VC No.</label>
+                                        <input placeholder="Enter your VC No." name="first name" type="text" required="">
+                                    </div>
+                                    <div class="w3ls-text sec-right">
+                                        <label class="contact-form-w3ls">User ID</label>
+                                        <input placeholder="Enter your User Id " name="first name" type="text" required="">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="w3ls-text sec-left">
+                                        <label class="contact-form-w3ls">Registered Mobile Number.</label>
+                                        <input placeholder="Enter your RMN " name="first name" type="text" required="">
+                                    </div>
+                                    <div class="w3ls-text sec-right">
+                                        <label class="contact-form-w3ls">Email</label>
+                                        <input placeholder="Enter your Email" name="first name" type="email" required="">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="w3ls-pay-submit">
+                                        <input type="submit" value="Login">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab3">
+                                <form action="#" method="post" class="agile_form">
+                                    <div class="w3ls-text sec-left">
+                                        <label class="contact-form-w3ls">MAC Id.</label>
+                                        <input placeholder="Enter your MAC ID" name="first name" type="text" required="">
+                                    </div>
+                                    <div class="w3ls-text sec-right">
+                                        <label class="contact-form-w3ls">User ID</label>
+                                        <input placeholder="Enter your User Id " name="first name" type="text" required="">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="w3ls-text sec-left">
+                                        <label class="contact-form-w3ls">Registered Mobile Number.</label>
+                                        <input placeholder="Enter your RMN " name="first name" type="text" required="">
+                                    </div>
+                                    <div class="w3ls-text sec-right">
+                                        <label class="contact-form-w3ls">Email</label>
+                                        <input placeholder="Enter your Email" name="first name" type="email" required="">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="w3ls-pay-submit">
+                                        <input type="submit" value="Login">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab4">
+                                <form action="#" method="post" class="agile_form">
+                                    <div class="w3ls-text sec-left">
+                                        <label class="contact-form-w3ls">Registered Mobile Number.</label>
+                                        <input placeholder="Enter your RMN " name="first name" type="text" required="">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="w3ls-pay-submit">
+                                        <input type="submit" value="Login">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!-- //services -->
+
+            </div>
+
+        </div>
+    </div>
+</div>
+

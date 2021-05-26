@@ -1,0 +1,41 @@
+.agile-payfields input[type="text"] {
+    margin: 1em 0;
+    width: 41%;
+    padding: 0.5em;
+    font-size: 1em;
+    color: #000;
+    border: 1px solid #000;
+    background: transparent;
+    display: block;
+}
+
+.agile-payfields input[type="email"] {
+    margin: 1em 0;
+    width: 41%;
+    padding: 0.5em;
+    font-size: 1em;
+    color: #000;
+    border: 1px solid #000;
+    background: transparent;
+    display: block;
+}
+
+.w3ls-pay-submit {
+    margin-top: 2em;
+}
+.resp-tabs-list li {
+    padding: 1em 2em;
+    background: #006eb7;
+    color: #fff;
+}
+ul.resp-tabs-list li.resp-tab-active {
+    border-right: none;
+    background-color: #03b9f8;
+    position: relative;
+    color: #FFF;
+    z-index: 1;
+}
+.resp-tabs-container {
+    padding: 0 1em 2em;
+    background-color: #03b9f8;
+}
